@@ -1,2 +1,41 @@
-# TrabalhoSemestreWebSimplesFullStack
-Projeto Full Stack desenvolvido com PHP, HTML e MySQL, integrando frontend e backend com banco de dados relacional. Implementa operações CRUD (inserção, listagem, edição e exclusão) e modelagem SQL, demonstrando conexão via conexao.php e manipulação de dados em ambiente web, simulando um sistema real de gestão.
+📊 Sistema Web com PHP e MySQL
+
+Projeto Full Stack desenvolvido utilizando PHP, HTML e MySQL, com integração entre frontend e backend e conexão com banco de dados relacional.
+
+🚀 Funcionalidades
+
+Cadastro de registros
+
+Listagem de dados
+
+Edição de informações
+
+Exclusão de registros
+
+Conexão com banco via conexao.php
+
+O sistema implementa operações CRUD (Create, Read, Update e Delete), aplicando conceitos de modelagem de banco de dados e consultas SQL.
+
+🛠 Tecnologias Utilizadas
+
+PHP
+
+HTML
+
+MySQL
+
+SQL
+
+🎯 Objetivo do Projeto
+
+Aplicar na prática conceitos de desenvolvimento web com integração a banco de dados, simulando um sistema real de gerenciamento de informações.
+
+⚙️ Como Executar
+
+Instalar um servidor local (ex: XAMPP ou WAMP).
+
+Importar o banco de dados no MySQL.
+
+Configurar as credenciais no arquivo conexao.php.
+
+Executar o projeto pelo navegador via localhost.
