@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Novo Medicamento</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <h2>Cadastrar Novo Medicamento</h2>
+    <br>
+    <form action="inserir.php" method="POST" id="formMedicamento">
+        <div class="mb-3">
+            <label class="form-label">Nome do Medicamento *</label>
+            <input type="text" name="nome" id="nome" class="form-control" required minlength="3">
+        </div>
+        
+        <div class="mb-3">
+            <label class="form-label">Fabricante *</label>
+            <input type="text" name="fabricante" class="form-control" required>
+        </div>
+        
+        <div class="mb-3">
+            <label class="form-label">Categoria *</label>
+            <select name="categoria" class="form-select" required>
+                <option value="">Selecione a categoria</option>
+                <option value="antibiotico">Antibiótico</option>
+                <option value="analgesico">Analgésico</option>
+                <option value="antiinflamatorio">Anti-inflamatório</option>
+                <option value="antifungico">Antifúngico</option>
+            </select>
+        </div>
+        
+        <div class="mb-3">
+            <label class="form-label">Preço (R$) *</label>
+            <input type="number" name="preco" step="0.01" min="0.01" class="form-control" required>
+        </div>
+        
+        <div class="mb-3">
+            <label class="form-label">Quantidade em Estoque *</label>
+            <input type="number" name="quantidade_estoque" min="0" class="form-control" required>
+        </div>
+        
+        <div class="mb-3">
+            <label class="form-label">Data de Validade *</label>
+            <input type="date" name="data_validade" id="data_validade" class="form-control" required>
+        </div>
+        
+        <div class="mb-3 form-check">
+            <input type="checkbox" name="controlado" value="1" class="form-check-input" id="controlado">
+            <label class="form-check-label" for="controlado">Medicamento Controlado</label>
+        </div>
+        
+        <button type="submit" class="btn btn-success">Cadastrar Medicamento</button>
+        <a href="index.php" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
+
+<script>
+function validarForm() {
+    var nome = document.getElementById('nome').value;
+    var dataValidade = document.getElementById('data_validade').value;
+    var hoje = new Date().toISOString().split('T')[0];
+    
+    if(nome.length < 3) {
+        alert('Nome deve ter pelo menos 3 caracteres!');
+        return false;
+    }
+    
+    if(dataValidade <= hoje) {
+        alert('Data de validade deve ser posterior à data atual!');
+        return false;
+    }
+    
+    return true;
+}
+document.getElementById('formMedicamento').onsubmit = validarForm;
+</script>
+</body>
+</html>
